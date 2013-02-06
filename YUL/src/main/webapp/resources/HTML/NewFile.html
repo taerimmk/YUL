@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<link href="css/top_menu_20130205.css" rel="stylesheet" type="text/css" />
+<title>Insert title here</title>
+<style>
+.test { color: #000; padding: .5em; border: 1px solid #444; }
+.active { color: #900;}
+.inside { background-color: aqua; }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+
+
+</script>
+</head>
+<body>
+	<p>Has an attached custom event.</p>
+	<button>Trigger custom event</button>
+	<span style="display: none;"></span>
+	<div class="test">test div</div>
+	<script>
+	$("div.test").on({
+		  click: function(){
+		    $(this).toggleClass("active");
+		  },
+		  mouseenter: function(){
+		    $(this).addClass("inside");
+		  },
+		  mouseleave: function(){
+		    $(this).removeClass("inside");
+		  }
+		});
+	</script>
+
+</body>
+</html>
